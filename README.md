@@ -2,7 +2,7 @@
 
 **Smart, one-click Android dependency management plugin for Android Studio and IntelliJ IDEA.**
 
-![Dependency Resolver UI](assets/screenshot.png)
+![Dependency Resolver UI](assets/screenshot_0.0.5.png)
 
 ## 📌 Overview 
 Adding dependencies to an Android project is historically tedious. Developers have to:
