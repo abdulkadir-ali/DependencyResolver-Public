@@ -50,11 +50,11 @@ Type a library name in the search field (e.g. `room` in the screenshot):
 - `retrofit` → Retrofit + Gson converter
 - `room` → Room (runtime + KTX + KSP compiler)
 - `hilt` → Hilt (Android + KSP compiler)
-- ...and 25+ more!
+- `firebase` → Firebase BoM (Analytics, Crashlytics, Auth, Firestore, etc.)
+- ...and 45+ more!
 
 You can also search by category keywords like `networking`, `database`, `testing`, `di`, `image`.
 
-### 4. Review Suggestions
 ### 4. Review Suggestions
 Each result card gives you everything you need to know. For example, the `Room` card in the screenshot shows:
 - **Library Name & Version:** `Room v2.6.4` (guaranteed to be compatible)
@@ -74,6 +74,8 @@ Click **✚ Add to Project** to insert the dependency. The plugin will:
 6. Show a balloon notification confirming success
 7. Trigger Gradle sync
 
+> **Tip:** Use the **Target Module** dropdown above the search bar to choose which module receives the dependency. It defaults to `:app` but auto-discovers all modules in your project.
+
 ---
 
 ## 📦 Supported Libraries
@@ -84,12 +86,13 @@ Click **✚ Add to Project** to insert the dependency. The plugin will:
 | **Networking** | Retrofit, OkHttp (BOM), Ktor Client (BOM) |
 | **Database** | Room (w/ KSP), DataStore |
 | **DI** | Hilt (w/ KSP), Koin (BOM) |
-| **Architecture** | Navigation, Lifecycle, Paging, WorkManager, Fragment KTX, Activity KTX |
+| **Backend** | Firebase (BOM & all modules), Apollo GraphQL |
+| **Architecture** | Navigation, Lifecycle, Paging, WorkManager, Fragment KTX, Activity KTX, App Startup |
 | **Image Loading** | Coil, Glide (w/ KSP) |
 | **Serialization** | Kotlinx Serialization, Moshi (w/ KSP), Gson |
-| **Async** | Kotlin Coroutines |
-| **Utility** | Timber, LeakCanary |
-| **Media** | CameraX, Media3 / ExoPlayer |
+| **Async / Utility** | Kotlin Coroutines, Timber, LeakCanary, Arrow, Browser, Palette, KSP |
+| **Media / Animation** | CameraX, Media3 / ExoPlayer, Lottie |
+| **Security** | Security Crypto, Biometric |
 | **Testing** | JUnit, MockK, Truth, Espresso, Turbine, Robolectric |
 
 ---
