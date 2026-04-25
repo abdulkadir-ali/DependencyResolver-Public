@@ -16,10 +16,14 @@ Adding dependencies to an Android project is historically tedious. Developers ha
 
 ## ✨ Features
 
+- **Selective Dependency Injection** — interactively select exactly which optional components (e.g. `converter-gson` for Retrofit or `lifecycle-livedata-ktx` for Lifecycle) you want to include via checkboxes before injecting them.
+- **Smart Partial Installation State** — seamlessly detects if you already have a subset of a library installed. The UI disables checkboxes for installed artifacts and dynamically changes the injection action to "Add Remaining", preventing duplicate entries.
+- **Non-Intrusive Gradle Sync** — silently saves your build files in the background, allowing IntelliJ to natively prompt its "Sync Now" floating action button. This empowers you to comfortably batch-add multiple dependencies without being forced to wait for sequential Gradle syncs.
 - **Auto-detects project config** — instantly reads your active Kotlin, AGP, Gradle, and compileSdk versions.
-- **Remote Knowledge Base** — fetches daily-updated versions of 30+ libraries from a Custom Cloudflare Pages API.
-- **Intelligent Compatibility Engine** — doesn't just give you the latest version; it guarantees the suggested version is compatible with your local Kotlin/AGP constraints, and dynamically aligns companion compiler plugins (like matching Kotlin `2.2.0` with KSP `2.2.0-1.0.28`).
+- **AGP 9.0+ Built-in Kotlin** — fully supports projects using AGP 9.0+ where the Kotlin compiler is bundled inside AGP with no explicit Kotlin plugin declaration. Detects the Kotlin version from a remotely-updated mapping table, with offline hardcoded fallback.
+- **Intelligent Compatibility Engine** — guarantees the suggested version is compatible with your local Kotlin/AGP constraints, dynamically aligning compiler plugins (like KSP) and automatically falling back to an intelligent dynamic discovery engine for untracked library versions.
 - **One-click insertion** — automatically generates and inserts entries into `[versions]`, `[libraries]`, and `[plugins]` in your TOML catalog, plus corresponding lines in your app's Gradle file.
+- **Multi-module support** — a target module selector dropdown lets you inject dependencies into any module (`:app`, `:core:data`, `:feature:auth`, etc.) and perfectly preserves your selection across UI refreshes.
 - **Supports both DSLs** — Kotlin DSL (`build.gradle.kts`) and Groovy DSL (`build.gradle`).
 - **BOM support** — automatically uses `platform()` wrappers where required (e.g. Jetpack Compose, OkHttp, Koin, Ktor).
 
